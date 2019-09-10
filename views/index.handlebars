@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="jumbotron">
+        <h1 class="display-4">Welcome to the Good Burger!</h1>
+        <p class="lead"></p>
+        <hr class="my-4">
+        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            {{#each burger_data}}
+            {{#unless this.devoured}}
+            <div class="col-md-3">
+                <pre>{{this.id}}. {{this.burger_name}} </pre>
+            </div>
+            <div class="col-md-9">
+                <form action="/burgers/update?_method=PUT" method="post" class="button-size">
+                    <input type="hidden" name="burger_id" type="text" value={{this.id}}>
+                    <br>
+                    <button type="submit" class="btn btn-primary btn-lg">OM NOM NOM</button>
+                </form>
+            </div>
+            {{/unless}}
+            {{/each}}
+        </div>
+    </div>
+</div>
