@@ -16,7 +16,8 @@ app.set("view engine", "handlebars");
 
 
 var routes = require("./controllers/routes.js");
-app.use("/", routes)
+app.use("/", routes);
+app.use("/burgers/update", routes);
 
 app.listen(PORT, function () {
     console.log("App listening on PORT " + PORT);
