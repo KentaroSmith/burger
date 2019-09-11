@@ -20,5 +20,5 @@ app.use("/", routes);
 app.use("/burgers/update", routes);
 
 app.listen(PORT, function () {
-    console.log("App listening on PORT " + PORT);
+    console.log("http://localhost:" + PORT);
 });

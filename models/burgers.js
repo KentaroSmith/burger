@@ -6,8 +6,10 @@ var burger = {
             result(res)
         })
     },
-    update: function (id, result) {
-        orm.update("burgers", id, result)
+    update: function (id, condition, result) {
+        orm.update("burgers", id, condition, function (res) {
+            result(res)
+        })
     }
 }
 

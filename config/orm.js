@@ -7,9 +7,10 @@ var orm = {
         })
     },
     update: function (tableInput, condition, response) {
-        connection.query("UPDATE " + tableInput + " SET devoured=TRUE WHERE ID =" + condition + ";", function (err, result) {
+        connection.query("UPDATE " + tableInput + " SET devoured=1 WHERE ID =" + condition + ";", function (err, result) {
             if (err) throw err;
             response(result)
+            console.log(result)
         })
     }
 }
