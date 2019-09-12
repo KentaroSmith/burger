@@ -1,10 +1,10 @@
 var express = require("express");
 var handlebars = require("express-handlebars")
 var app = express();
-//var mysql = require("mysql");
+
 
 const PORT = process.env.PORT || 3000;
-//app.use(express.static("public"));
+app.use(express.static("public"));
 //data parsing 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
